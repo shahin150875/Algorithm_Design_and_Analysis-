@@ -1,0 +1,25 @@
+ 🔴Linear Search
+What it is:
+Linear Search checks each element one by one from the start until the target is found.
+How it works:
+Compare the target with every item in the list.
+Time Complexity:
+Best case: O(1) (found at first position)
+Worst case: O(n) (found at last or not found)
+When to use:
+When the list is unsorted or very small.
+
+  🔴Binary Search
+What it is:
+Binary Search repeatedly divides the list into two halves to find the target.
+Important:
+The list must be sorted.
+How it works:
+Check the middle →
+If target is smaller → search left half
+If larger → search right half
+Time Complexity:
+Best case: O(1)
+Worst case: O(log n)
+When to use:
+When the list is sorted and large.
