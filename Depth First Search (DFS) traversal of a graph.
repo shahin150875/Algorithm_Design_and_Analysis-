@@ -1,0 +1,51 @@
+#include <iostream> 
+using namespace std; 
+ 
+const int V = 5; 
+ 
+void DFS(int vertex, int adj[V][V], bool visited[]) { 
+    visited[vertex] = true; 
+    cout << vertex << " "; 
+ 
+    for (int i = 0; i < V; i++) { 
+        if (adj[vertex][i] == 1 && !visited[i]) { 
+            DFS(i, adj, visited); 
+        } 
+    } 
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+int main() { 
+    int adj[V][V] = { 
+        {0, 1, 1, 0, 0}, 
+        {1, 0, 0, 1, 1}, 
+        {1, 0, 0, 0, 0}, 
+        {0, 1, 0, 0, 0}, 
+        {0, 1, 0, 0, 0} 
+    }; 
+ 
+ 
+    bool visited[V] = {false}; 
+ 
+ 
+    cout << "Depth First Search (DFS) Traversal starting from vertex 
+0: \n"; 
+    DFS(0, adj, visited); 
+    cout << endl; 
+ 
+    return 0; 
+}
